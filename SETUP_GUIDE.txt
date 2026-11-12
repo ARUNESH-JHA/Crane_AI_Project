@@ -1,0 +1,44 @@
+========================================================================
+             CRANE AI ANOMALY DETECTION SYSTEM SETUP GUIDE
+========================================================================
+
+--- PROJECT ARTIFACTS ---
+- app5.py                                      (Main Streamlit Dashboard)
+- Updated_Window_Based_PLC_Preprocessing_featuresAdded.py  (Model Pipeline)
+- Crane_Autoencoder.keras                      (Pretrained Model Weights)
+- Final_Scaling.pkl                            (Calibrated Scaling Cache)
+- threshold.pkl                                (Baseline Anomaly Threshold)
+- requirements.txt                             (Libraries list)
+- README.md                                    (Project Documentation)
+
+Note: Telemetry datasets (*.csv) are sensitive plant data and are excluded 
+from git. Place your periodic sensor CSV export in the folder or upload 
+it directly via the dashboard.
+
+------------------------------------------------------------------------
+STEP 1: SETUP & RUN STREAMLIT DASHBOARD
+------------------------------------------------------------------------
+Open your terminal (PowerShell / Command Prompt) in the project folder:
+
+If using POWERSHELL:
+--------------------
+  python -m venv venv
+  .\venv\Scripts\pip.exe install -r requirements.txt
+  .\venv\Scripts\streamlit.exe run app5.py
+
+If using CMD / Linux / macOS:
+-----------------------------
+  python -m venv venv
+  venv\Scripts\pip.exe install -r requirements.txt
+  venv\Scripts\streamlit.exe run app5.py
+
+------------------------------------------------------------------------
+STEP 2: RUN ANOMALY DIAGNOSTICS
+------------------------------------------------------------------------
+1. The dashboard opens automatically at http://localhost:8501.
+2. In the left sidebar:
+   - Upload your Periodic Sensor CSV.
+   - (Optional) Upload Event Log CSV.
+3. Click "Run Anomaly Diagnostic".
+4. Explore executive KPIs, AI explanations, sensor trends, and reports.
+========================================================================

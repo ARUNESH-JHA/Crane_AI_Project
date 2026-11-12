@@ -1,0 +1,33 @@
+# Virtual environment
+venv/
+env/
+.env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Sensitive plant datasets & runtime logs
+*.csv
+*.tsv
+*.xlsx
+*.parquet
+CraneGuard_Report_*.txt
+executive_summary.txt
+timeline_data.csv
+anomaly_report.*
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
